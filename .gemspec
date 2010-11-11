@@ -12,7 +12,7 @@ spec = Gem::Specification.new do |s|
   s.extra_rdoc_files = ["README"]
   s.description = "A like plugin/gem for rails"
   
-  s.files             = %w( README Rakefile MIT-LICENSE )
+  s.files             = %w( README Rakefile MIT-LICENSE THUMBIT_VERSION )
   s.files            += Dir.glob("lib/**/*")
   s.files            += Dir.glob("rails/**/*")
   s.files            += Dir.glob("test/**/*")
