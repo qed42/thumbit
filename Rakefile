@@ -1,7 +1,6 @@
 require 'rake'
 require 'rake/testtask'
 require 'rake/rdoctask'
-require 'rake/gempackagetask'
 
 desc 'Default: run unit tests.'
 task :default => :test
@@ -21,30 +20,4 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
-end
-
-PKG_FILES = FileList[
-  '[a-zA-Z]*',
-  'lib/**/*',
-  'rails/**/*',
-  'test/**/*'
-]
-
-spec = Gem::Specification.new do |s|
-  s.name = "thumbit"
-  s.version = "0.0.1"
-  s.author = "Madhusudhan Srinivasa"
-  s.email = "madhums8@gmail.com"
-  s.homepage = "http://github.com/madhums/thumbit/"
-  s.platform = Gem::Platform::RUBY
-  s.summary = "A like plugin/gem for rails"
-  s.files = PKG_FILES.to_a
-  s.require_path = "lib"
-  s.has_rdoc = false
-  s.extra_rdoc_files = ["README"]
-end
-
-desc 'Turn this plugin into a gem.'
-Rake::GemPackageTask.new(spec) do |pkg|
-  pkg.gem_spec = spec
 end
