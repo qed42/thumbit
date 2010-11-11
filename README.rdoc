@@ -22,7 +22,7 @@ Just include acts_as_likeable in the model and then...
   Post.find_likes_for @post     # @post being the instance of the class Post
 
 Will provide more options later. 
-<em>Please feel free to fork and make your own changes.</em>
+<em><b>Please feel free to report bugs, issues, suggestions and feedbacks. Fork to make your own changes.</b></em>
 == TODO
 * Architect properly and probably provide more helpers...
 * Create proper documentation
