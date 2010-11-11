@@ -1,2 +1,2 @@
 # Include hook code here
-require "thumbit"
+require File.dirname(__FILE__) + "/lib/thumbit"
