@@ -13,11 +13,10 @@ Include the below in your 'Gemfile' and run <tt>bundle install</tt>
   gem 'thumbit', '0.0.1'
 == Example
 You have a model 'Post', 
-Just include acts_as_likeable in the model
   class Post < ActiveRecord::Base
     acts_as_likeable
   end
-
+Just include acts_as_likeable in the model and then...
   @post.like_it current_user    # current_user being the user object
   Post.find_likes_by user_obj   # user_obj being the user object
   Post.find_likes_for @post     # @post being the instance of the class Post
@@ -29,6 +28,7 @@ Will provide more options later.
 * Create proper documentation
 * Create proper tests
 
-<b>Credits</b> : Highly inspired by acts_as_commentable and acts_as_rateable. This my first plugin/gem !
-       
+== Credits 
+Highly inspired by acts_as_commentable and acts_as_rateable. This my first plugin/gem !
+==       
 Copyright (c) 2010 [Madhusudhan], released under the MIT license
