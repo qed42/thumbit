@@ -1,0 +1,38 @@
+=Thumbit
+A simple like plugin for rails.
+
+== Requirements
+I have only tested this with :
+  Rails version : 3.0.1 
+  Rubygems version : 1.3.7 
+  Bundler version : 1.0.3
+
+== Installation
+<b>As a plugin</b>
+  <tt>rails plugin install git://github.com/madhums/thumbit.git</tt>
+  
+<b>As a gem</b>  
+  Include the below in your 'Gemfile' and run <tt>bundle install</tt>
+  <tt>gem 'thumbit', '0.0.1'</tt>
+    
+== Example
+You have a model 'Post', 
+
+<tt>class Post < ActiveRecord::Base
+  acts_as_likeable
+end</tt>
+
+<tt>@post.like_it current_user</tt>    # current_user being the user object
+<tt>Post.find_likes_by user_obj</tt>   # user_obj being the user object
+<tt>Post.find_likes_for @post</tt>     # @post being the instance of the class Post
+  
+<em>Please feel free to fork and make your own changes.</em>
+
+== TODO
+  * Architect properly
+  * Create proper documentation
+  * Create proper tests
+
+<b>Credits</b> : Highly inspired by acts_as_commentable and acts_as_rateable. This my first plugin/gem !
+       
+Copyright (c) 2010 [Madhusudhan], released under the MIT license
